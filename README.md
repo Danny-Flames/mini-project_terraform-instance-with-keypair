@@ -11,7 +11,7 @@
 ```bash
 aws configure
 ```
-Enter your:
+Enter my:
 - AWS Access Key ID
 - AWS Secret Access Key
 - Default region (e.g., us-east-1)
@@ -30,7 +30,7 @@ mkdir terraform-ec2-keypair
 cd terraform-ec2-keypair
 ```
 
-### Step 2: Generate SSH Key Pair (if you don't have one)
+### Step 2: Generate SSH Key Pair (if I don't have one)
 ```bash
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/terraform-key
 ```
@@ -44,7 +44,7 @@ The provided template has issues. Here's a corrected version:
 ```hcl
 # Provider configuration
 provider "aws" {
-  region = "us-east-1"  # Change to your preferred region
+  region = "us-east-1"  # Change to my preferred region
 }
 
 # Data source to get the latest Amazon Linux 2 AMI
@@ -81,7 +81,7 @@ resource "aws_security_group" "web_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]  # Restrict this to your IP for security
+    cidr_blocks = ["0.0.0.0/0"]  # Restrict this to my IP for security
   }
 
   # All outbound traffic
@@ -218,7 +218,7 @@ ssh -i terraform-ec2-key.pem ec2-user@YOUR_PUBLIC_IP
 
 ## Phase 5: Documentation and Cleanup
 
-### Step 11: Document Your Findings
+### Step 11: Document My Findings
 Create a report including:
 - Screenshots of successful deployment
 - Output of `terraform show`
@@ -234,7 +234,7 @@ terraform destroy
 ## Troubleshooting Common Issues
 
 ### Issue 1: AMI Not Found
-- Update the AMI ID for your region
+- Update the AMI ID for my region
 - Use the data source approach shown above
 
 ### Issue 2: Security Group Not Found
@@ -257,8 +257,8 @@ terraform destroy
 4. **Proper Tagging**: Tags all resources for identification
 5. **Comprehensive Outputs**: Provides all necessary connection information
 
-## Files in Your Project Directory
-After completion, you should have:
+## Files in My Project Directory
+After completion, I should have:
 - `main.tf` - Terraform configuration
 - `terraform-ec2-key.pem` - Private key file
 - `.terraform/` - Terraform working directory
@@ -266,5 +266,5 @@ After completion, you should have:
 
 ## Security Considerations
 - The SSH access (port 22) is open to all IPs (`0.0.0.0/0`) for demonstration
-- In production, restrict SSH access to your specific IP address
+- In production, restrict SSH access to my specific IP address
 - Store private keys securely and never commit them to version control
