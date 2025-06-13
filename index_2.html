@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Mini Project - Terraform EC2 Instance with Key Pair and User Data
+    </title>
+  </head>
+  <body>
+    <div class="text-[#152639] dark:text-light">
+      <div class="h-[calc(100%-120px)] overflow-auto pt-5">
+        <div>
+          <div id="65d8552570f06f2bb6f637d9">
+            <article
+              class="prose inline-block w-full max-w-full prose-h1:text-2xl prose-h1:font-bold prose-pre:bg-[#343446] prose-img:rounded-lg dark:text-white dark:prose-headings:text-white dark:prose-a:text-white dark:prose-strong:text-gray-100"
+            >
+              <h1>
+                Mini Project: Terraform EC2 Instance with Key Pair and User Data
+              </h1>
+              <h2 id="purpose:">Purpose:</h2>
+              <p>
+                In this mini project, you will use Terraform to automate the
+                launch of an EC2 instance on AWS. The project includes the
+                generation of a downloadable key pair for the instance and the
+                execution of a user data script to install and configure Apache
+                HTTP server.
+              </p>
+              <h3>Objectives:</h3>
+              <ol>
+                <li>
+                  <p><strong>Terraform Configuration:</strong></p>
+                  <ul>
+                    <li>
+                      Learn how to write Terraform code to launch an EC2
+                      instance with specified configurations.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p><strong>Key Pair Generation:</strong></p>
+                  <ul>
+                    <li>
+                      Generate a key pair and make it downloadable after EC2
+                      instance creation.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p><strong>User Data Execution:</strong></p>
+                  <ul>
+                    <li>
+                      Use Terraform to execute a user data script on the EC2
+                      instance during launch.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+              <h3>Project Tasks:</h3>
+              <h4>Task 1: Terraform Configuration for EC2 Instance</h4>
+              <ol>
+                <li>
+                  <p>
+                    Create a new directory for your Terraform project (e.g.,
+                    <code>terraform-ec2-keypair</code>).
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Inside the project directory, create a Terraform
+                    configuration file (e.g., <code>main.tf</code>).
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Write Terraform code to create an EC2 instance with the
+                    following specifications:
+                  </p>
+                  <ul>
+                    <li>Instance type: <code>t2.micro</code></li>
+                    <li>
+                      Key pair: Generate a new key pair and make it
+                      downloadable.
+                    </li>
+                    <li>Security group: Allow incoming traffic on port 80.</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>
+                    Initialize the Terraform project using the command:
+                    <code>terraform init</code>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Apply the Terraform configuration to create the EC2 instance
+                    using the command: <code>terraform apply</code>.
+                  </p>
+                </li>
+              </ol>
+              <h4>Task 2: User Data Script Execution</h4>
+              <ol>
+                <li>
+                  <p>
+                    Extend your Terraform configuration to include the execution
+                    of the provided user data script.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Modify the user data script to install and configure Apache
+                    HTTP server.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Apply the updated Terraform configuration to launch the EC2
+                    instance with the user data script using the command:
+                    <code>terraform apply</code>.
+                  </p>
+                </li>
+              </ol>
+              <h4>Task 3: Accessing the Web Server</h4>
+              <ol>
+                <li>
+                  <p>
+                    After the EC2 instance is created and running, access the
+                    Apache web server by using its public IP address.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Verify that the web server displays the "Hello World"
+                    message generated by the user data script.
+                  </p>
+                </li>
+              </ol>
+              <h3>Instructions:</h3>
+              <ol>
+                <li>
+                  <p>
+                    Create a new directory for your Terraform project using a
+                    terminal (<code>mkdir terraform-ec2-keypair</code>).
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Change into the project directory (<code
+                      >cd terraform-ec2-keypair</code
+                    >).
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Create a Terraform configuration file (<code
+                      >nano main.tf</code
+                    >).
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Copy and paste the sample Terraform configuration template
+                    into your file.
+                  </p>
+                </li>
+              </ol>
+              <pre
+                class="relative"
+              ><button type="button" class="absolute right-2 top-1.5 flex items-center gap-1 rounded-md border border-blue-300 bg-inherit px-2 py-1.5 text-sm font-medium text-blue-300"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.3677 8.03125L17.3677 8.03125C17.92 8.03125 18.3677 8.47896 18.3677 9.03125L18.3677 16.0312C18.3677 17.1358 17.4722 18.0312 16.3677 18.0312L9.36768 18.0312C8.81539 18.0312 8.36768 17.5835 8.36768 17.0312L8.36768 15.0312M10.3677 2.03125L4.36768 2.03125C3.26311 2.03125 2.36768 2.92668 2.36768 4.03125L2.36768 10.0312C2.36768 11.1358 3.26311 12.0312 4.36768 12.0312L10.3677 12.0312C11.4722 12.0312 12.3677 11.1358 12.3677 10.0312L12.3677 4.03125C12.3677 2.92668 11.4722 2.03125 10.3677 2.03125Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg><span>Copy</span></button><code class="language-hcl">provider "aws" {"\n  region = \"us-east-1\"  # Change this to your desired AWS region\n"}
+
+resource "aws_key_pair" "example_keypair" {"\n  key_name   = \"example-keypair\"\n  public_key = file(\"~/.ssh/id_rsa.pub\")  # Replace with the path to your public key file\n"}
+
+resource "aws_instance" "example_instance" {"\n  ami           = \"ami-0c55b159cbfafe1f0\"  # Specify your desired AMI ID\n  instance_type = \"t2.micro\"\n  key_name      = aws_key_pair.example_keypair.key_name\n\n  vpc_security_group_ids = [\"sg-0123456789abcdef0\"]  # Specify your security group ID\n\n  user_data = &lt;&lt;-EOF\n              #!/bin/bash\n              yum update -y\n              yum install -y httpd\n              systemctl start httpd\n              systemctl enable httpd\n              echo \"&lt;h1&gt;Hello World from $(hostname -f)&lt;/h1&gt;\" &gt; /var/www/html/index.html\n              EOF\n"}
+
+output "public_ip" {"\n  value = aws_instance.example_instance.public_ip\n"}
+</code></pre>
+              <ol start="5">
+                <li>
+                  <p>
+                    Save the file and initialize the Terraform project using
+                    <code>terraform init</code>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Apply the Terraform configuration using
+                    <code>terraform apply</code> and confirm the creation of the
+                    EC2 instance.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Access the Apache web server on the created EC2 instance
+                    using its public IP address.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Document your observations and any challenges faced during
+                    the project.
+                  </p>
+                </li>
+              </ol>
+              <h3>Side Note:</h3>
+              <pre
+                class="relative"
+              ><button type="button" class="absolute right-2 top-1.5 flex items-center gap-1 rounded-md border border-blue-300 bg-inherit px-2 py-1.5 text-sm font-medium text-blue-300"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.3677 8.03125L17.3677 8.03125C17.92 8.03125 18.3677 8.47896 18.3677 9.03125L18.3677 16.0312C18.3677 17.1358 17.4722 18.0312 16.3677 18.0312L9.36768 18.0312C8.81539 18.0312 8.36768 17.5835 8.36768 17.0312L8.36768 15.0312M10.3677 2.03125L4.36768 2.03125C3.26311 2.03125 2.36768 2.92668 2.36768 4.03125L2.36768 10.0312C2.36768 11.1358 3.26311 12.0312 4.36768 12.0312L10.3677 12.0312C11.4722 12.0312 12.3677 11.1358 12.3677 10.0312L12.3677 4.03125C12.3677 2.92668 11.4722 2.03125 10.3677 2.03125Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg><span>Copy</span></button><code>- Ensure you have the AWS CLI installed and configured with appropriate credentials.
+- The provided AMI ID is just an example; replace it with the ID of a suitable AMI in your desired region.
+- Modify the security group ID to match your requirements.
+- This is a learning exercise; use it to gain hands-on experience with Terraform for infrastructure as code.
+</code></pre>
+            </article>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
